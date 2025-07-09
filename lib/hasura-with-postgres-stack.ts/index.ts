@@ -4,7 +4,7 @@ import { Construct } from 'constructs';
 import { readFileSync } from 'fs';
 import path from 'path';
 
-export class CdkHasuraWithPostgresDeploymentStack extends cdk.Stack {
+export class CdkHasuraWithPostgresStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 

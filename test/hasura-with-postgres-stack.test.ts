@@ -1,9 +1,9 @@
 // import * as cdk from 'aws-cdk-lib';
 // import { Template } from 'aws-cdk-lib/assertions';
-// import * as CdkHasuraWithPostgresDeployment from '../lib/cdk-hasura-with-postgres-deployment-stack';
+// import * as CdkHasuraWithPostgresDeployment from '../lib/hasura-with-postgres-stack.';
 
 // example test. To run these tests, uncomment this file along with the
-// example resource in lib/cdk-hasura-with-postgres-deployment-stack.ts
+// example resource in lib/hasura-with-postgres-stack..ts
 test('SQS Queue Created', () => {
 //   const app = new cdk.App();
 //     // WHEN
