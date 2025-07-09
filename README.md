@@ -78,6 +78,15 @@ The stack uses the default AWS account and region from your CLI configuration. T
 - Postgres password is hardcoded - **use a Secrets Manager for production**
 - Hasura admin secret is hardcoded - **use a Secrets Manager for production**
 
+### Production Recommendations
+
+1. **Restrict SSH access** to specific IP ranges
+2. **Use AWS Secrets Manager** for database passwords and admin secrets
+3. **Enable HTTPS** with proper SSL certificates
+4. **Configure VPC** with private subnets for the database
+5. **Set up monitoring** and logging
+6. **Use RDS** instead of containerized PostgreSQL for production workloads
+
 ##  Accessing Hasura
 
 After deployment, you can access:
