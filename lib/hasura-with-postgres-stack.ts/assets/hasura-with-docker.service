@@ -1,0 +1,14 @@
+[Unit]
+Description=Hasura & Postgres running via docker container
+Requires=docker.service
+After=docker.service
+
+[Service]
+WorkingDirectory=/home/ec2-user/hasura-with-docker
+ExecStart=/usr/bin/docker compose up
+ExecStop=/usr/bin/docker compose down
+Restart=always
+User=ec2-user
+
+[Install]
+WantedBy=multi-user.target

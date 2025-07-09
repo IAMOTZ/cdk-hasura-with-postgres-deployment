@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
-import { CdkHasuraWithPostgresDeploymentStack } from '../lib/cdk-hasura-with-postgres-deployment-stack';
+import { CdkHasuraWithPostgresDeploymentStack } from '../lib/hasura-with-postgres-stack.ts';
 
 const app = new cdk.App();
 new CdkHasuraWithPostgresDeploymentStack(app, 'CdkHasuraWithPostgresDeploymentStack', {
