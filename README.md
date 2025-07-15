@@ -73,14 +73,12 @@ The stack uses the default AWS account and region from your CLI configuration. T
 
 ⚠️ **Important Security Notes:**
 
-- The current configuration allows SSH access from any IP (port 22) - **restrict for production**
 - Hasura console is accessible from any IP (port 8080)
 - Postgres password is hardcoded - **use a Secrets Manager for production**
 - Hasura admin secret is hardcoded - **use a Secrets Manager for production**
 
 ### Production Recommendations
 
-1. **Restrict SSH access** to specific IP ranges
 2. **Use AWS Secrets Manager** for database passwords and admin secrets
 3. **Enable HTTPS** with proper SSL certificates
 4. **Configure VPC** with private subnets for the database

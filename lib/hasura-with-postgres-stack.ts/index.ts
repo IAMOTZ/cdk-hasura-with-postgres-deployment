@@ -20,11 +20,6 @@ export class CdkHasuraWithPostgresStack extends cdk.Stack {
       description: 'Hasura/Postgres security group'
     })
 
-    // Inbound rule below allows all inbound traffic from any IP address on port 22 (SSH)
-    // This is primarily to enable EC2 instance connect - for development/testing
-    // Should be removed or updated to allow specific IP addresses if deploying to production
-    securityGroup.addIngressRule(cdk.aws_ec2.Peer.anyIpv4(), cdk.aws_ec2.Port.tcp(22), 'SSH Access')
-
     // Inbound rule below allows all inbound traffic from any IP address on port 8080
     // This allows access to the Hasura console
     securityGroup.addIngressRule(cdk.aws_ec2.Peer.anyIpv4(), cdk.aws_ec2.Port.tcp(8080), 'Hasura Console')
