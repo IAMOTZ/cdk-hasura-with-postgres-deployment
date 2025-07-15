@@ -32,6 +32,10 @@ export class CdkHasuraWithPostgresStack extends cdk.Stack {
       securityGroup,
     });
 
+
+    // Add the AWS managed policy for SSM to the instance role
+    instance.role.addManagedPolicy(cdk.aws_iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMManagedInstanceCore'))
+
     // Upload application assets to S3
     const assets = new cdk.aws_s3_assets.Asset(this, 'HasuraWithPostgresEC2Assets', {
       path: path.join(__dirname, './assets'),
